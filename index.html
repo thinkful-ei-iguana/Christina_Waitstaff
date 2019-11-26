@@ -7,9 +7,12 @@
     <link rel='stylesheet' href='index.css'>
     <title>WaitStaff Calculator</title>
 </head>
-<body>
-    <h1>Waitstaff Calculator</h1>
-        <main>
+<body>  
+  <header>
+      <h1>Waitstaff Calculator</h1>
+  </header>
+  <main>
+      <div class='left-column'> 
           <form action='#' class='meal-form-input'>  
             <fieldset>
                 <legend>Enter Meal Details</legend>
@@ -22,9 +25,9 @@
                 <button class='submit'>Sumbit</button>
                 <button class='cancel'>Cancel</button>
             </fieldset>
-
-          </form>  
-        </main>
+          </form>
+      </div>         
+      <div class='right-column'>
         <section>
           <h2>Customer Charges</h2>
           <div class='customer-charges'>
@@ -42,8 +45,11 @@
           </div>
         </section>
         <button class='reset'>Reset Form</button>
+      </div>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src='index.js'></script>
+  </main>
     
 </body>
 </html>

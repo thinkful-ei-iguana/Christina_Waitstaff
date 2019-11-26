@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    padding: 2px;
+    margin: 10px;
+    text-align: center;
+    border: 2px dashed black;
+    color: white;
+    background-color: darkblue;
+}
+
+main {
+    display: flex;
+    border: 2px solid black;
+}
+
+.meal-form-input {
+    margin: 6px;
+    padding: 10px;
+}
+
+.left-column {
+    width: 35%;
+    float: left;
+
+}
+
+.right-column {
+    padding: 10px;
+    margin: 10px;
+    border: 2 px solid black;
+    width: 65%;
+    float: right;
+}
+
+.reset {
+    padding: 8px;
+    margin: 6px;
+}
