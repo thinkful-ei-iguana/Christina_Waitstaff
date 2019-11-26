@@ -4,7 +4,7 @@
   "description": "Waitstaff Calculator that allows the user to dynamically add meal info and track tip income.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/thinkful-ei-iguana/Christina_Waitstaff/issues"
   },
-  "homepage": "https://github.com/thinkful-ei-iguana/Christina_Waitstaff#readme"
+  "homepage": "https://github.com/thinkful-ei-iguana/Christina_Waitstaff#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
