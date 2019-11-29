@@ -12,15 +12,18 @@ function handleForm() {
   $('.meal-form-input').on('submit', event => {
     event.preventDefault();
     let formPrice = Number($('#price').val());
-    let formTax = Number($('#tax').val());
-    let formTip = Number($('#tip').val());
+    let formTax = parseFloat($('#tax').val())/100;
+    let formTip = parseFloat($('#tip').val())/100;    
+    let tax = formPrice * formTax;
+    let subtotal = formPrice + tax;
+    let tip = formPrice * formTip;
+    let mealTotal = subtotal + tip;
     STORE.Meals++;
-    let newTotal = STORE.TipTotal;
-    STORE.TipTotal = newTotal + formTip;
+    STORE.TipTotal += tip;
     STORE.BasePrice = formPrice;
-    STORE.Tax = formTax;
-    STORE.Tip = formTip;
-    STORE.Total = formPrice + formTax + formTip;
+    STORE.Tax = tax;
+    STORE.Tip = tip;
+    STORE.Total = mealTotal;
     updateEarnings();
     updateCharges();
   });
@@ -36,7 +39,7 @@ function updateCharges() {
 function updateEarnings() {
   $('.tip-total').html(`<p>Tip Total: ${STORE.TipTotal}</p>`);
   $('.meal-count-total').html(`<p>Meal Count: ${STORE.Meals}</p>`);
-  $('.average-tip').html(`<p>Average Tip Per Meal: ${STORE.TipTotal / STORE.Meals}</p>`);
+  $('.average-tip').html(`<p>Average Tip Per Meal: ${STORE.Meals > 0 ? (STORE.TipTotal / STORE.Meals) : 0 }</p>`);
 
 }
 
